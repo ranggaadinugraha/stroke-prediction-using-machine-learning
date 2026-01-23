@@ -1,87 +1,122 @@
 # 🧠 Stroke Prediction Using Machine Learning
 
-This project aims to predict the occurrence of **stroke** based on patient health data using machine learning techniques.  
-Several preprocessing methods are applied to improve data quality, and multiple models are compared to evaluate performance.
+This project focuses on predicting **stroke occurrence** using patient healthcare data and machine learning techniques.  
+The objective is to build a reliable classification model by handling missing values, addressing class imbalance, and evaluating model performance using appropriate metrics.
+
+This project is designed as a **portfolio project** to demonstrate end-to-end machine learning workflow in a healthcare context.
 
 ---
 
 ## 📌 Project Objective
-- To predict stroke occurrence using healthcare data
-- To handle missing values and imbalanced classes
-- To compare the performance of different classification models
+- Predict stroke occurrence using healthcare data  
+- Handle missing values and imbalanced classes  
+- Compare machine learning model performance  
+- Visualize key evaluation results  
 
 ---
 
-## 🧰 Technologies & Libraries
-- Python
-- Google Colab
-- Pandas & NumPy
-- Scikit-learn
-- Imbalanced-learn (SMOTE)
-- Matplotlib & Seaborn
-- Plotly
-- Missingno
+## 🧰 Tools & Technologies
+- Python  
+- Google Colab  
+- Pandas & NumPy  
+- Scikit-learn  
+- Imbalanced-learn (SMOTE)  
+- Matplotlib, Seaborn  
+- Missingno  
 
 ---
 
-## 📂 Dataset
+## 📂 Dataset Overview
 **Dataset:** Healthcare Stroke Dataset  
-The dataset contains patient information such as:
-- Age
-- Gender
-- BMI
-- Average glucose level
-- Work type
-- Smoking status
-- Residence type
+
+**Key Features:**
+- Age, Gender, BMI  
+- Average glucose level  
+- Work type, Smoking status  
+- Residence type  
 
 **Target Variable:**
-- `stroke = 1` → Stroke
-- `stroke = 0` → Healthy
+- `stroke = 1` → Stroke  
+- `stroke = 0` → Healthy  
 
 ---
 
-## ⚙️ Project Workflow
-1. Load and explore dataset
-2. Handle missing values using KNN Imputer
-3. Encode categorical features
-4. Scale numerical features using MinMaxScaler
-5. Handle class imbalance using SMOTE
-6. Split dataset into training and testing sets
-7. Train machine learning models
-8. Evaluate and compare model performance
+## ⚙️ Workflow Summary
+1. Data loading and exploration  
+2. Missing value analysis  
+3. Missing value handling using **KNN Imputer**  
+4. Feature encoding and scaling  
+5. Class imbalance handling using **SMOTE**  
+6. Model training (MLP & KNN)  
+7. Model evaluation and visualization  
 
 ---
 
 ## 🧠 Machine Learning Models
-- **Multi-Layer Perceptron (MLP)**
-- **K-Nearest Neighbors (KNN)**
-
-Both models are evaluated using classification metrics.
+- **Multi-Layer Perceptron (MLP)**  
+- **K-Nearest Neighbors (KNN)**  
 
 ---
 
-## 📊 Model Evaluation
-Evaluation metrics used:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
+## 📊 Key Visualizations
 
-A comparison table is generated to analyze the performance of each model.
+### 🔍 Visualize Missing Values
+Missing value distribution before preprocessing:
+
+![Missing Values](asset/missing_values.png)
 
 ---
 
-## 📈 Results
-- The dataset was highly imbalanced and successfully balanced using SMOTE.
-- Both models performed well, with differences in precision and recall.
-- Model comparison results were saved in CSV format for further analysis.
+### ⚖️ Class Distribution on Stroke Column
+Class imbalance before and after applying SMOTE:
+
+![Class Distribution](asset/class_distribution.png)
+
+---
+
+### 📈 Stroke Class Performance Comparison
+Comparison of **precision, recall, and F1-score** for stroke prediction:
+
+![Stroke Class Performance Comparison](asset/stroke_model_comparison.png)
+
+**Insights:**
+- Both models show strong performance after class balancing  
+- **MLP** demonstrates stable generalization  
+- **KNN** achieves slightly higher F1-score for stroke detection  
+- Recall is prioritized to minimize false negatives in medical prediction  
+
+---
+
+## ✅ Project Output & Results
+
+### 🧪 Data Processing Output
+- Missing values successfully handled using **KNN Imputer**
+- Numerical features scaled to improve model convergence
+- Severe class imbalance resolved using **SMOTE**
+
+---
+
+### 🤖 Model Performance Output
+- Both MLP and KNN achieved high classification performance after balancing
+- **MLP** shows consistent and stable results across evaluation metrics
+- **KNN** performs competitively with strong stroke detection capability
+
+---
+
+### 📊 Evaluation Output
+- Model evaluation metrics include **accuracy, precision, recall, and F1-score**
+- Metrics were saved as a CSV file (`Final_Model_Results.csv`)
+- Visualization highlights the importance of **recall and F1-score** in healthcare prediction tasks
+
+---
+
+## 🧠 Key Takeaway
+> *This project demonstrates how proper preprocessing, class balancing, and metric visualization significantly improve machine learning performance in imbalanced healthcare datasets such as stroke prediction.*
 
 ---
 
 ## 🚀 How to Run
-1. Open the notebook using Google Colab  
+1. Open the notebook in Google Colab  
 2. Upload the dataset file:  
    `healthcare-dataset-stroke-data.csv`  
 3. Run all cells sequentially  
